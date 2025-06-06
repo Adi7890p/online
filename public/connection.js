@@ -23,8 +23,10 @@ function connect(room) {
 
 document.getElementById('hostBtn').onclick = () => {
   roomCode = randomCode();
+  document.getElementById('roomDisplay').innerText = `Room Code: ${roomCode}`;
   connect(roomCode);
 };
+
 
 document.getElementById('joinBtn').onclick = () => {
   roomCode = document.getElementById('roomInput').value.trim().toUpperCase();
