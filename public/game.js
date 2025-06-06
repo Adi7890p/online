@@ -15,8 +15,12 @@ socket.onmessage = (e) => {
 
 document.getElementById('yesBtn').onclick = () => {
   socket.send(JSON.stringify({ type: 'button', roomCode, value: 'yes' }));
+  document.getElementById('yesBtn').style.backgroundColor='blue';
+  document.getElementById('noBtn').style.backgroundColor='white';
 };
 
 document.getElementById('noBtn').onclick = () => {
   socket.send(JSON.stringify({ type: 'button', roomCode, value: 'no' }));
+  document.getElementById('yesBtn').style.backgroundColor='white';
+  document.getElementById('noBtn').style.backgroundColor='blue';
 };
